@@ -9,7 +9,7 @@ load_dotenv(dotenv_path=dotenv_path)
 
 # NOTE: Adjust these settings as needed in project/.env
 API_HOST = os.getenv("TEST_API_HOST") or "http://localhost:8000"
-RESOURCE_URI = os.getenv("TEST_RESOURCE_URI") or "things"
+RESOURCE_URI = os.getenv("TEST_RESOURCE_URI") or "cookie_stands"
 USERNAME = os.getenv("TEST_USERNAME")
 PASSWORD = os.getenv("TEST_PASSWORD")
 
@@ -26,7 +26,6 @@ class ApiTester:
 
     def fetch_tokens(self):
         """Fetches access and refresh JWT tokens from api
-
         Returns:
             tuple: access,refresh
         """
@@ -46,7 +45,6 @@ class ApiTester:
     def get_all(self):
         """get list of all resources from api
         Usage: python api_tester.py get_all
-
         Returns: JSON
         """
         access_token = self.fetch_tokens()[0]
@@ -63,10 +61,8 @@ class ApiTester:
 
     def get_one(self, id):
         """get 1 resource by id from api
-
         Usage:
         python api_tester.py get_one 1
-
         Returns: JSON
         """
         access_token = self.fetch_tokens()[0]
@@ -84,11 +80,9 @@ class ApiTester:
     # TODO adjust parameter names to match API
     def create(self, name, description, owner):
         """creates a resource in api
-
         Usage:
         python api_tester.py create /
             --name=required --description=required --owner=required
-
         Returns: JSON
         """
 
@@ -112,11 +106,9 @@ class ApiTester:
 
     def update(self, id, name=None, description=None, owner=None):
         """updates a resource in api
-
         Usage:
         python api_tester.py update 1 /
             --name=optional --description=optional --owner=optional
-
         Returns: JSON
         """
 
@@ -142,10 +134,8 @@ class ApiTester:
 
     def delete(self, id):
         """deletes a resource in api
-
         Usage:
         python api_tester.py delete 1
-
         Returns: Empty string if no error
         """
 
