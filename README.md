@@ -32,3 +32,10 @@ Template Project for starting up CRUD API with Django Rest Framework
 `username: admin password : mmt12345`
 
 `username: osama password : osamamaher`
+
+## accessable links 
+`admin/` to login 
+`api/v1/cookie_stands/` to check the cookie stands
+`api-auth/`
+`api/token/`
+`api/token/refresh`
