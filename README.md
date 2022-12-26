@@ -23,3 +23,12 @@ Template Project for starting up CRUD API with Django Rest Framework
 - Run makemigrations and migrate commands
 - Run `collectstatic` if needed.
 - Optional: Update `api_tester.py`
+
+![elephantDB](imgs/DB1.png)
+![elephantDB2](imgs/DB2.png)
+
+## super users
+
+`username: admin password : mmt12345`
+
+`username: osama password : osamamaher`
